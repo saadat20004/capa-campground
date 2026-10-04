@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capa Campground · Private Forest Camping near Lake Quinault, WA</title>
+<meta name="description" content="Six private, quiet campsites on an off grid homestead in the Quinault River Valley, minutes from Lake Quinault and Olympic National Park. From $45 per night.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --forest:#17251a;
+  --moss:#2c4630;
+  --moss-2:#3b5a3c;
+  --fern:#7d9a52;
+  --lichen:#cfd8b8;
+  --mist:#f1f2ea;
+  --paper:#fbfbf6;
+  --bark:#5b4535;
+  --yolk:#eaa63a;
+  --yolk-dk:#d18e22;
+  --ink:#1f2a20;
+  --muted:#5f6b5c;
+  --line:#dfe3d3;
+  --radius:18px;
+  --shadow:0 18px 40px -18px rgba(23,37,26,.35);
+  --ease:cubic-bezier(.22,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;letter-spacing:-.02em}
+.wrap{width:min(1280px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--yolk);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.5em;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .25s var(--ease),background .25s,box-shadow .25s,color .25s}
+.btn-yolk{background:var(--yolk);color:var(--forest)}
+.btn-yolk:hover{background:var(--yolk-dk);transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(209,142,34,.8)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-ghost:hover{background:var(--forest);color:var(--paper);border-color:var(--forest);transform:translateY(-2px)}
+.btn i{transition:transform .25s var(--ease)}
+.btn:hover i.fa-arrow-right{transform:translateX(4px)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.55em;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fern)}
+.section{padding:clamp(70px,9vw,120px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;max-width:14ch;margin-top:10px}
+.sec-head p{max-width:46ch;color:var(--muted)}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(251,251,246,.86);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.top.scrolled{border-color:var(--line);box-shadow:0 6px 20px -16px rgba(0,0,0,.4)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.logo span.mark{width:38px;height:38px;border-radius:12px;background:var(--moss);color:var(--lichen);display:grid;place-items:center;font-size:1rem;transition:transform .4s var(--ease)}
+.logo:hover span.mark{transform:rotate(-12deg)}
+.nav{display:flex;gap:30px;align-items:center}
+.nav a{text-decoration:none;font-weight:600;font-size:.97rem;position:relative;color:var(--ink)}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:var(--fern);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:not(.btn):hover::after,.nav a.active::after{transform:scaleX(1)}
+.nav .btn{padding:.7em 1.25em}
+.burger{display:none;background:none;border:0;font-size:1.4rem;cursor:pointer;width:44px;height:44px;border-radius:12px}
+.burger:hover{background:var(--mist)}
+
+/* hero */
+.hero{padding:28px 0 0;position:relative}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:36px;align-items:stretch}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:30px 0 90px}
+.hero-copy h1{font-size:clamp(3.2rem,7.4vw,6.4rem);font-weight:800;margin:16px 0 18px;color:var(--forest)}
+.hero-copy h1 em{font-style:normal;color:var(--fern);display:block}
+.hero-copy p.lead{font-size:1.15rem;color:var(--muted);max-width:38ch}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--mist);border:1px solid var(--line);font-size:.9rem;font-weight:600}
+.badge i{color:var(--fern)}
+.badge.star i{color:var(--yolk)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.mosaic{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:clamp(440px,64vh,640px);margin-bottom:60px}
+.tile{position:relative;overflow:hidden;border-radius:var(--radius);cursor:zoom-in;background:var(--lichen);border:0;padding:0}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .4s}
+.tile:hover img{transform:scale(1.06)}
+.tile.big{grid-row:span 2}
+.tile .cap{position:absolute;left:12px;bottom:12px;background:rgba(23,37,26,.72);color:#fff;font-size:.8rem;font-weight:600;padding:6px 11px;border-radius:999px;backdrop-filter:blur(6px);opacity:0;transform:translateY(8px);transition:.35s var(--ease)}
+.tile:hover .cap{opacity:1;transform:none}
+.tile.more::after{content:"";position:absolute;inset:0;background:rgba(23,37,26,.45);transition:background .3s}
+.tile.more:hover::after{background:rgba(23,37,26,.6)}
+.tile.more .more-lbl{position:absolute;inset:0;z-index:2;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.05rem;text-align:center}
+.tile.more .more-lbl i{display:block;font-size:1.6rem;margin-bottom:6px}
+
+/* quick book bar */
+.quick{position:relative;z-index:5;margin-top:-34px}
+.quick form{background:var(--forest);color:var(--paper);border-radius:22px;padding:14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:8px;box-shadow:var(--shadow)}
+.qf{display:flex;flex-direction:column;gap:2px;padding:10px 16px;border-radius:14px;transition:background .25s}
+.qf:hover,.qf:focus-within{background:rgba(255,255,255,.07)}
+.qf label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--lichen);font-weight:700;display:flex;gap:7px;align-items:center}
+.qf input,.qf select{background:transparent;border:0;color:var(--paper);font-weight:600;font-size:1rem;padding:2px 0;width:100%;color-scheme:dark}
+.qf select option{color:var(--ink)}
+.qf input:focus,.qf select:focus{outline:none}
+.quick .btn{height:100%;justify-content:center;border-radius:14px;padding-inline:1.8em}
+
+/* facts strip */
+.facts{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:46px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact{padding:22px 16px;display:flex;align-items:center;gap:12px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact i{font-size:1.25rem;color:var(--moss-2);width:42px;height:42px;border-radius:12px;background:var(--mist);display:grid;place-items:center;flex:none;transition:transform .3s var(--ease),background .3s,color .3s}
+.fact:hover i{transform:translateY(-3px);background:var(--moss);color:var(--lichen)}
+.fact b{display:block;font-size:1rem;line-height:1.2}
+.fact small{color:var(--muted);font-size:.83rem}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.story-media{position:relative}
+.story-media .main{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.story-media .main img{width:100%;height:100%;object-fit:cover}
+.story-media .inset{position:absolute;right:-28px;bottom:-34px;width:46%;aspect-ratio:1;border-radius:var(--radius);overflow:hidden;border:8px solid var(--paper);box-shadow:var(--shadow)}
+.story-media .inset img{width:100%;height:100%;object-fit:cover}
+.stamp{position:absolute;left:-18px;top:28px;background:var(--yolk);color:var(--forest);width:118px;height:118px;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:'Bricolage Grotesque';font-weight:800;line-height:1;box-shadow:var(--shadow)}
+.stamp small{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-family:'Hanken Grotesk';margin-bottom:4px}
+.stamp span{font-size:2rem}
+.story-copy h2{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:800;margin:12px 0 20px}
+.story-copy > p{color:var(--muted);margin-bottom:16px;max-width:52ch}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.hl div{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:14px;background:var(--mist);border:1px solid transparent;transition:border-color .3s,transform .3s var(--ease),background .3s}
+.hl div:hover{border-color:var(--lichen);transform:translateY(-3px);background:#fff}
+.hl i{color:var(--fern);font-size:1.15rem;margin-top:3px;width:22px;text-align:center}
+.hl b{display:block;font-size:.98rem}
+.hl small{color:var(--muted);font-size:.86rem;line-height:1.45;display:block}
+
+/* sites */
+.sites{background:var(--forest);color:var(--paper);border-radius:36px;margin-inline:12px}
+.sites .sec-head p{color:var(--lichen)}
+.sites .eyebrow{color:var(--yolk)}
+.tabs{display:inline-flex;background:rgba(255,255,255,.07);padding:5px;border-radius:999px;gap:4px;flex-wrap:wrap}
+.tab{border:0;background:transparent;color:var(--lichen);padding:.6em 1.15em;border-radius:999px;font-weight:700;cursor:pointer;transition:background .25s,color .25s}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{background:var(--lichen);color:var(--forest)}
+.site-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.site{background:#213325;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(207,216,184,.12);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s,opacity .35s}
+.site:hover{transform:translateY(-6px);box-shadow:0 24px 40px -20px rgba(0,0,0,.6);border-color:rgba(207,216,184,.35)}
+.site.hide{display:none}
+.slides{position:relative;aspect-ratio:4/3;overflow:hidden;background:#2a3d2c}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease,transform 1s var(--ease);cursor:zoom-in}
+.slides img.on{opacity:1}
+.site:hover .slides img.on{transform:scale(1.04)}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(251,251,246,.92);color:var(--forest);cursor:pointer;opacity:0;transition:opacity .25s,transform .25s;z-index:2}
+.sl-btn.prev{left:10px}.sl-btn.next{right:10px}
+.slides:hover .sl-btn,.sl-btn:focus-visible{opacity:1}
+.sl-btn:hover{transform:translateY(-50%) scale(1.1)}
+.dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);transition:width .3s,background .3s}
+.dots span.on{width:20px;border-radius:5px;background:#fff}
+.tag{position:absolute;top:12px;left:12px;z-index:2;background:var(--yolk);color:var(--forest);font-weight:700;font-size:.78rem;padding:5px 11px;border-radius:999px;display:flex;gap:6px;align-items:center}
+.site-body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.site-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.site h3{font-size:1.45rem;font-weight:700}
+.rating{font-weight:700;font-size:.92rem;white-space:nowrap;color:var(--lichen)}
+.rating i{color:var(--yolk)}
+.meta{display:flex;flex-wrap:wrap;gap:14px;margin:8px 0 12px;font-size:.9rem;color:var(--lichen)}
+.meta i{margin-right:5px;color:var(--fern)}
+.site p.desc{font-size:.93rem;color:#c3cbb0;flex:1}
+.site .btn{margin-top:18px;justify-content:center;width:100%}
+.site .btn-ghost{color:var(--lichen)}
+.site .btn-ghost:hover{background:var(--lichen);color:var(--forest);border-color:var(--lichen)}
+
+/* know */
+.know{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.know-card{border-radius:24px;padding:34px;border:1px solid var(--line);background:#fff}
+.know-card.plan{background:var(--mist)}
+.know-card h3{font-size:1.6rem;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.know-card h3 i{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.1rem;background:var(--moss);color:var(--lichen)}
+.know-card.plan h3 i{background:var(--yolk);color:var(--forest)}
+.know-card ul{list-style:none;display:grid;gap:13px}
+.know-card li{display:flex;gap:12px;align-items:flex-start}
+.know-card li i{margin-top:5px;width:18px;text-align:center;color:var(--fern)}
+.know-card.plan li i{color:var(--bark)}
+.know-card li small{display:block;color:var(--muted);font-size:.86rem}
+
+/* gallery */
+.gallery{columns:4 240px;column-gap:12px}
+.g-item{break-inside:avoid;margin-bottom:12px;border-radius:14px;overflow:hidden;position:relative;cursor:zoom-in;display:block;width:100%;border:0;padding:0;background:var(--lichen)}
+.g-item img{width:100%;height:auto;transition:transform .8s var(--ease)}
+.g-item:hover img{transform:scale(1.05)}
+.g-item::after{content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:10px;top:10px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(251,251,246,.92);color:var(--forest);opacity:0;transform:scale(.7);transition:.3s var(--ease)}
+.g-item:hover::after{opacity:1;transform:scale(1)}
+.g-more{text-align:center;margin-top:26px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(12,20,13,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:60px 70px}
+.lb.open{display:flex;animation:fade .3s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.lb img{max-width:100%;max-height:78vh;border-radius:12px;object-fit:contain;transition:opacity .25s}
+.lb .lb-cap{color:var(--lichen);margin-top:16px;font-weight:600;text-align:center}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.1);color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:background .25s,transform .25s}
+.lb button:hover{background:var(--yolk);color:var(--forest);transform:scale(1.06)}
+.lb .x{top:20px;right:20px}.lb .lp{left:16px;top:50%;margin-top:-26px}.lb .ln{right:16px;top:50%;margin-top:-26px}
+.lb .count{position:absolute;top:32px;left:28px;color:var(--lichen);font-weight:700}
+
+/* reviews */
+.rev-wrap{display:grid;grid-template-columns:330px 1fr;gap:40px;align-items:start}
+.score{background:var(--moss);color:var(--paper);border-radius:24px;padding:32px;position:sticky;top:100px}
+.score .big{font-family:'Bricolage Grotesque';font-size:5rem;font-weight:800;line-height:1;color:var(--yolk)}
+.score p{color:var(--lichen);margin:8px 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:rgba(255,255,255,.09);padding:6px 12px;border-radius:999px;font-size:.84rem;font-weight:600}
+.chips i{color:var(--yolk);margin-right:4px}
+.score .award{margin-top:22px;padding-top:20px;border-top:1px solid rgba(207,216,184,.2);display:grid;gap:12px;font-size:.92rem}
+.score .award div{display:flex;gap:10px;align-items:center}
+.score .award i{color:var(--yolk);width:20px;text-align:center}
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;transition:transform .3s var(--ease),box-shadow .3s}
+.rev:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.rev .q{font-family:'Bricolage Grotesque';font-size:1.3rem;font-weight:700;line-height:1.25;color:var(--forest);margin:10px 0 16px}
+.rev .q::before{content:"\201C"}.rev .q::after{content:"\201D"}
+.rev .who{display:flex;align-items:center;gap:10px;font-size:.9rem}
+.rev .av{width:36px;height:36px;border-radius:50%;background:var(--lichen);display:grid;place-items:center;font-weight:800;color:var(--moss)}
+.rev .who small{display:block;color:var(--muted)}
+.rev .stars{color:var(--yolk);font-size:.85rem;letter-spacing:2px}
+.rev.wide{grid-column:span 2;background:var(--mist)}
+.rev.wide p{color:var(--muted)}
+
+/* nearby */
+.near{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.near-card{padding:26px;border-radius:20px;border:1px solid var(--line);background:#fff;transition:.35s var(--ease);position:relative;overflow:hidden}
+.near-card::before{content:"";position:absolute;inset:auto -40% -60% auto;width:180px;height:180px;border-radius:50%;background:var(--mist);transition:transform .5s var(--ease);z-index:0}
+.near-card:hover::before{transform:scale(2.4)}
+.near-card > *{position:relative;z-index:1}
+.near-card:hover{border-color:var(--lichen);transform:translateY(-4px)}
+.near-card i{font-size:1.4rem;color:var(--moss-2);margin-bottom:16px}
+.near-card h4{font-size:1.25rem;margin-bottom:6px}
+.near-card p{font-size:.92rem;color:var(--muted)}
+.near-card .dist{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--fern)}
+
+/* host */
+.host{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;background:var(--mist);border-radius:28px;padding:40px}
+.host-av{position:relative}
+.host-av img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:var(--shadow)}
+.host-av i{position:absolute;right:-2px;bottom:4px;width:36px;height:36px;border-radius:50%;background:var(--yolk);color:var(--forest);display:grid;place-items:center;border:3px solid var(--mist);font-size:.85rem}
+.host h3{font-size:2rem;margin:6px 0 8px}
+.host p{color:var(--muted);max-width:60ch}
+.host-perks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.host-perks span{background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:.86rem;font-weight:600}
+.host-perks i{color:var(--fern);margin-right:6px}
+
+/* booking */
+.book{background:linear-gradient(180deg,var(--paper),var(--mist))}
+.book-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:28px;align-items:start}
+.form{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,40px)}
+.step{margin-bottom:28px}
+.step-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.step-h b{width:30px;height:30px;border-radius:50%;background:var(--moss);color:var(--lichen);display:grid;place-items:center;font-size:.85rem}
+.step-h h3{font-size:1.25rem;font-weight:700}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.85rem;font-weight:700;color:var(--muted)}
+.field input,.field select{padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);transition:border-color .25s,box-shadow .25s;width:100%}
+.field input:focus,.field select:focus{outline:none;border-color:var(--fern);box-shadow:0 0 0 4px rgba(125,154,82,.18)}
+.field.err input,.field.err select{border-color:#c0492b}
+.msg{font-size:.84rem;color:#a83d22;min-height:0;display:none}
+.field.err .msg{display:block}
+.site-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pick{position:relative}
+.pick input{position:absolute;opacity:0;left:0;top:0;width:1px;height:1px;pointer-events:none}
+.pick label{display:flex;flex-direction:column;gap:3px;padding:12px;border:1.5px solid var(--line);border-radius:14px;cursor:pointer;transition:border-color .25s,background .25s,transform .25s;height:100%}
+.pick label:hover{border-color:var(--fern);transform:translateY(-2px)}
+.pick input:checked + label{border-color:var(--moss);background:var(--mist);box-shadow:inset 0 0 0 1px var(--moss)}
+.pick input:focus-visible + label{outline:3px solid var(--yolk);outline-offset:2px}
+.pick b{font-size:.95rem}
+.pick small{color:var(--muted);font-size:.78rem;line-height:1.3}
+.pick label .ic{color:var(--fern);font-size:.85rem}
+.pick input:disabled + label{opacity:.4;cursor:not-allowed;transform:none}
+.stepper{display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--line);border-radius:12px;padding:6px 6px 6px 14px;background:var(--paper)}
+.stepper button{width:40px;height:40px;border-radius:10px;border:0;background:var(--mist);cursor:pointer;transition:background .2s}
+.stepper button:hover:not(:disabled){background:var(--lichen)}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper output{font-weight:700}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg{position:relative}
+.seg input{position:absolute;opacity:0;left:0;top:0;width:1px;height:1px;pointer-events:none}
+.seg label{padding:11px 16px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;font-weight:600;display:flex;gap:8px;align-items:center;transition:.25s}
+.seg label:hover{border-color:var(--fern)}
+.seg input:checked + label{background:var(--moss);color:var(--paper);border-color:var(--moss)}
+.seg input:focus-visible + label{outline:3px solid var(--yolk);outline-offset:2px}
+.rv-len{margin-top:12px;display:none}
+.rv-len.show{display:block;animation:fade .3s}
+.alert{display:none;gap:10px;padding:12px 14px;border-radius:12px;font-size:.9rem;margin-top:12px;align-items:flex-start}
+.alert.show{display:flex}
+.alert.warn{background:#fdf1dc;color:#7a4d0c}
+.alert.ok{background:#e9f0dc;color:#38512a}
+.alert i{margin-top:3px}
+.alert button{background:none;border:0;text-decoration:underline;font-weight:700;cursor:pointer;color:inherit}
+
+.summary{position:sticky;top:96px;background:var(--forest);color:var(--paper);border-radius:26px;overflow:hidden}
+.sum-img{aspect-ratio:16/10;position:relative;overflow:hidden}
+.sum-img img{width:100%;height:100%;object-fit:cover;transition:opacity .4s}
+.sum-img .tag{top:auto;bottom:12px}
+.sum-body{padding:24px}
+.sum-body h3{font-size:1.5rem;margin-bottom:4px}
+.sum-body .sub{color:var(--lichen);font-size:.9rem}
+.lines{list-style:none;margin:18px 0;display:grid;gap:10px;font-size:.95rem}
+.lines li{display:flex;justify-content:space-between;gap:10px;padding-bottom:10px;border-bottom:1px dashed rgba(207,216,184,.2)}
+.lines li span:first-child{color:var(--lichen)}
+.lines li span:first-child i{width:18px;margin-right:6px;color:var(--fern)}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+.total b{font-family:'Bricolage Grotesque';font-size:2rem;color:var(--yolk)}
+.summary .btn{width:100%;justify-content:center}
+.fine{font-size:.8rem;color:var(--lichen);margin-top:12px;text-align:center}
+.done{display:none;text-align:center;padding:10px 0}
+.done.show{display:block;animation:fade .4s}
+.done i.big{font-size:2.4rem;color:var(--yolk);margin-bottom:10px}
+
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:stretch}
+.loc-info{background:var(--mist);border-radius:24px;padding:34px;display:flex;flex-direction:column;gap:16px}
+.loc-info h3{font-size:1.8rem}
+.loc-info p{color:var(--muted)}
+.loc-info ul{list-style:none;display:grid;gap:10px}
+.loc-info li{display:flex;gap:10px}
+.loc-info li i{color:var(--fern);margin-top:5px;width:18px}
+.map{border-radius:24px;overflow:hidden;min-height:380px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:saturate(.8)}
+
+/* footer */
+footer{background:var(--forest);color:var(--lichen);padding:70px 0 0;margin-top:40px}
+.foot-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(207,216,184,.15)}
+.foot-cta h2{font-size:clamp(1.9rem,4.6vw,3.4rem);color:var(--paper);max-width:16ch;font-weight:800}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:40px;padding:50px 0 44px}
+.foot-brand .logo{color:var(--paper);margin-bottom:16px}
+.foot-brand .logo .mark{background:var(--lichen);color:var(--forest)}
+.foot-brand p{font-size:.95rem;max-width:36ch;color:#b9c3a3}
+.social{display:flex;gap:10px;margin-top:20px}
+.social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.07);text-decoration:none;transition:background .25s,color .25s,transform .25s var(--ease)}
+.social a:hover{background:var(--yolk);color:var(--forest);transform:translateY(-3px)}
+.foot-col h4{font-size:1.05rem;color:var(--paper);margin-bottom:16px;letter-spacing:0}
+.foot-col ul{list-style:none;display:grid;gap:10px;font-size:.95rem}
+.foot-col a{text-decoration:none;color:#b9c3a3;transition:color .2s,padding .25s var(--ease)}
+.foot-col a:hover{color:var(--yolk);padding-left:4px}
+.foot-col .contact li{display:flex;gap:12px;align-items:flex-start}
+.foot-col .contact i{color:var(--yolk);margin-top:5px;width:16px;text-align:center}
+.foot-col .contact small{color:#8f9b7d}
+.foot-bottom{border-top:1px solid rgba(207,216,184,.15);padding:24px 0 28px;text-align:center;font-size:.9rem;color:#9aa688}
+
+/* mobile sticky */
+.mbar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--forest);color:var(--paper);border-radius:18px;padding:10px 10px 10px 18px;align-items:center;justify-content:space-between;box-shadow:var(--shadow);transform:translateY(130%);transition:transform .4s var(--ease)}
+.mbar.show{transform:none}
+.mbar b{font-family:'Bricolage Grotesque';font-size:1.3rem;color:var(--yolk)}
+.mbar small{display:block;color:var(--lichen);font-size:.78rem}
+.totop{position:fixed;right:20px;bottom:20px;z-index:55;width:48px;height:48px;border-radius:50%;border:0;background:var(--moss);color:var(--lichen);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{transform:translateY(-3px);background:var(--yolk);color:var(--forest)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+body{overflow-x:clip}
+@media (hover:none){.sl-btn{opacity:1}.tile .cap{opacity:1;transform:none}.g-item::after{display:none}}
+@media (max-width:1200px){.hero-copy h1{font-size:clamp(3rem,6.4vw,5.4rem)}}
+@media (max-width:1100px){
+  .site-grid{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .fact:nth-child(3){border-right:0}
+  .fact:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .near{grid-template-columns:repeat(2,1fr)}
+  .rev-wrap{grid-template-columns:1fr}
+  .score{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .quick form{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .quick .btn{grid-column:1/-1;padding:1em}
+}
+@media (max-width:900px){
+  .nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 22px;border-bottom:1px solid var(--line);box-shadow:0 20px 30px -20px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s var(--ease),visibility .3s;max-height:calc(100vh - 72px);overflow-y:auto}
+  .nav.open{opacity:1;visibility:visible;transform:none}
+  .nav a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .nav a::after{display:none}
+  .nav .btn{margin-top:14px;justify-content:center;border-bottom:0}
+  .burger{display:grid;place-items:center}
+  .hero-grid{grid-template-columns:1fr;gap:10px}
+  .hero-copy{padding:20px 0 10px}
+  .mosaic{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto;margin-bottom:56px}
+  .tile{aspect-ratio:1}
+  .tile.big{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+  .quick form{grid-template-columns:1fr 1fr}
+  .quick .btn{grid-column:span 2;padding:1em}
+  .story,.know,.book-grid,.loc{grid-template-columns:1fr}
+  .story-media{margin:0 20px 40px 0}
+  .stamp{left:-6px;width:96px;height:96px}
+  .stamp span{font-size:1.6rem}
+  .host{grid-template-columns:1fr;text-align:left;padding:28px}
+  .summary{position:static}
+  .mbar{display:flex}
+  .totop{bottom:96px}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 32px)}
+  .site-grid,.near,.rev-grid,.hl{grid-template-columns:1fr}
+  .rev.wide{grid-column:auto}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact{border-right:0!important;border-bottom:1px solid var(--line)}
+  .fact:nth-child(odd){border-right:1px solid var(--line)!important}
+  .fact:nth-last-child(-n+2){border-bottom:0}
+  .site-pick{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:1fr}
+  .sites{margin-inline:0;border-radius:26px}
+  .lb{padding:70px 10px}
+  .lb .lp,.lb .ln{top:auto;bottom:18px;margin:0}
+  .lb .lp{left:calc(50% - 64px)}.lb .ln{right:calc(50% - 64px)}
+  .story-media .inset{right:-12px;width:42%;border-width:5px}
+  .hero{padding-top:14px}
+  .hero-copy h1{font-size:clamp(2.6rem,12vw,3.4rem)}
+  .hero-copy p.lead{font-size:1.05rem}
+  .hero-ctas .btn{flex:1 1 100%;justify-content:center;white-space:nowrap}
+  .badges{gap:8px;margin:20px 0 24px}
+  .badge{font-size:.82rem;padding:7px 12px}
+  .mosaic{gap:8px;margin-bottom:46px}
+  .quick{margin-top:-26px}
+  .quick form{grid-template-columns:1fr 1fr;padding:10px;gap:4px}
+  .qf{padding:9px 10px}
+  .fact{padding:16px 10px;gap:10px}
+  .fact i{width:36px;height:36px;font-size:1rem}
+  .fact b{font-size:.92rem}
+  .sec-head{margin-bottom:30px}
+  .know-card,.loc-info{padding:24px}
+  .host{padding:24px;gap:20px}
+  .host .btn{justify-content:center}
+  .score{padding:26px}
+  .score .big{font-size:4rem}
+  .rev .q{font-size:1.15rem}
+  .map,.map iframe{min-height:300px}
+  .form{border-radius:20px}
+  .foot-grid{grid-template-columns:1fr;gap:30px;padding:40px 0 34px}
+  .foot-cta .btn{width:100%;justify-content:center}
+  .mbar .btn{padding:.8em 1.2em}
+}
+@media (max-width:900px){.foot-bottom{padding-bottom:100px}}
+@media (max-width:380px){
+  .quick form{grid-template-columns:1fr}
+  .site-pick{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .fact:nth-child(odd){border-right:0!important}
+  .fact{border-bottom:1px solid var(--line)!important}
+  .fact:last-child{border-bottom:0!important}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a href="#home" class="logo" aria-label="Capa Campground home"><span class="mark"><i class="fa-solid fa-tree"></i></span>Capa Campground</a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#sites">Campsites</a>
+      <a href="#photos">Photos</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+      <a href="#book" class="btn btn-yolk"><i class="fa-regular fa-calendar-check"></i>Book a site</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main id="home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy rv">
+        <span class="eyebrow"><i class="fa-solid fa-location-dot"></i> Amanda Park · Quinault River Valley, WA</span>
+        <h1>Forest quiet, <em>no crowds.</em></h1>
+        <p class="lead">Six private campsites on a small off grid homestead farmed since 1890, minutes from Lake Quinault and Olympic National Park.</p>
+        <div class="badges">
+          <span class="badge"><i class="fa-solid fa-thumbs-up"></i> 98% recommend · 364 reviews</span>
+          <span class="badge star"><i class="fa-solid fa-award"></i> Best in Washington finalist</span>
+          <span class="badge star"><i class="fa-solid fa-star"></i> Star Host</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#book" class="btn btn-yolk">Check availability <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#sites" class="btn btn-ghost"><i class="fa-solid fa-campground"></i> Compare sites</a>
+        </div>
+      </div>
+
+      <div class="mosaic rv" id="mosaic">
+        <button class="tile big" data-g="0"><img src="https://dxynby2r8cy0b.cloudfront.net/f_auto,c_limit,w_1400,q_auto/v1784925021/campground-photos/jmo7fnoy4dmhii5nwd83.jpg" alt="Capa Campground land surrounded by forest" fetchpriority="high"><span class="cap">The homestead</span></button>
+        <button class="tile" data-g="1"><img src="https://dxynby2r8cy0b.cloudfront.net/f_auto,c_limit,w_800,q_auto/v1784925015/campground-photos/heyqxsz4v1wuxonig60u.jpg" alt="Lake Quinault nearby" loading="lazy"><span class="cap">Lake Quinault, nearby</span></button>
+        <button class="tile" data-g="2"><img src="https://dxynby2r8cy0b.cloudfront.net/f_auto,c_limit,w_800,q_auto/v1784925045/campground-photos/egclimtxfywsqpkurucp.jpg" alt="Forest scenery on the property" loading="lazy"><span class="cap">On the land</span></button>
+        <button class="tile" data-g="3"><img src="https://dxynby2r8cy0b.cloudfront.net/f_auto,c_limit,w_800,q_auto/v1784925037/campground-photos/ocjdr76wqlkytxrxacr1.jpg" alt="Grounds of the campground" loading="lazy"><span class="cap">On the land</span></button>
+        <button class="tile more" data-g="4"><img src="https://dxynby2r8cy0b.cloudfront.net/f_auto,c_limit,w_800,q_auto/v1784925016/campground-photos/pj8lwgffmf5kdimsltae.jpg" alt="More photos of Capa Campground" loading="lazy"><span class="more-lbl"><span><i class="fa-regular fa-images"></i><span id="photoCount">All photos</span></span></span></button>
+      </div>
+    </div>
+
+    <!-- quick booking bar -->
+    <div class="wrap quick rv">
+      <form id="quickForm" aria-label="Quick availability check">
+        <div class="qf"><label for="qArrive"><i class="fa-regular fa-calendar"></i>Arrive</label><input type="date" id="qArrive"></div>
+        <div class="qf"><label for="qDepart"><i class="fa-regular fa-calendar"></i>Depart</label><input type="date" id="qDepart"></div>
+        <div class="qf"><label for="qGuests"><i class="fa-solid fa-user-group"></i>Guests</label>
+          <select id="qGuests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+        <div class="qf"><label for="qType"><i class="fa-solid fa-campground"></i>Camping with</label>
+          <select id="qType"><option value="tent">Tent</option><option value="rv">Van / small RV</option></select></div>
+        <button class="btn btn-yolk" type="submit">Find my site <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+
+    <div class="wrap">
+      <div class="facts rv">
+        <div class="fact"><i class="fa-solid fa-campground"></i><div><b>6 private sites</b><small>Spread out for privacy</small></div></div>
+        <div class="fact"><i class="fa-solid fa-van-shuttle"></i><div><b>Tent &amp; small RV</b><small>2 sites take vans</small></div></div>
+        <div class="fact"><i class="fa-solid fa-seedling"></i><div><b>2.5 acres</b><small>Working homestead</small></div></div>
+        <div class="fact"><i class="fa-solid fa-solar-panel"></i><div><b>Off grid</b><small>No hookups</small></div></div>
+        <div class="fact"><i class="fa-solid fa-ban"></i><div><b>No pets</b><small>Quiet for everyone</small></div></div>
+        <div class="fact"><i class="fa-solid fa-tag"></i><div><b>From $45</b><small>per night</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section">
+    <div class="wrap story">
+      <div class="story-media rv">
+        <div class="main"><img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1100,q_auto/v1692941200/campground-photos/q01acu0ykc3dppsyv98n/capa-campground-mountain-rainforest-campsite-3-washington-coast.jpg" alt="Forested tent site at Capa Campground" loading="lazy"></div>
+        <div class="inset"><img src="https://dxynby2r8cy0b.cloudfront.net/f_auto,c_limit,w_700,q_auto/v1784925022/campground-photos/uu4zo51ojs7nw16kw3ni.jpg" alt="The farm at Capa Campground" loading="lazy"></div>
+        <div class="stamp"><div><small>Land since</small><span>1890</span></div></div>
+      </div>
+      <div class="story-copy rv">
+        <span class="eyebrow"><i class="fa-solid fa-leaf"></i> The place</span>
+        <h2>Less campground. More homestead.</h2>
+        <p>Capa sits in the lush Quinault River Valley, between National Forest land and Olympic National Park, near the wild Colonel Bob Wilderness. Towering evergreens, green lawns and a small off grid farm give it a calm, timeless feel.</p>
+        <p>It's simple and relaxed: just six spacious sites, a garden, a flock of chickens, and hosts Paul &amp; Carol who walk you round when you arrive. At the end of a trail day you come back to real stillness.</p>
+        <div class="hl">
+          <div><i class="fa-solid fa-table"></i><span><b>Picnic table &amp; tent pad</b><small>Level pads at every site</small></span></div>
+          <div><i class="fa-solid fa-fire"></i><span><b>Fire ring at each site</b><small>Firewood sold on property</small></span></div>
+          <div><i class="fa-solid fa-kitchen-set"></i><span><b>Shared kitchen annex</b><small>Handy on rainy days</small></span></div>
+          <div><i class="fa-solid fa-egg"></i><span><b>Fresh farm eggs</b><small>From the resident hens</small></span></div>
+          <div><i class="fa-solid fa-faucet-drip"></i><span><b>Potable water</b><small>Plus trash service</small></span></div>
+          <div><i class="fa-solid fa-toilet"></i><span><b>Clean composting toilet</b><small>Solar lights &amp; hand sink</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITES -->
+  <section class="section sites" id="sites">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-map-pin"></i> Choose your spot</span>
+          <h2>Six sites, each tucked in the trees.</h2>
+        </div>
+        <div role="tablist" class="tabs" aria-label="Filter sites">
+          <button class="tab" role="tab" aria-selected="true" data-f="all">All 6</button>
+          <button class="tab" role="tab" aria-selected="false" data-f="tent">Tent only · 4</button>
+          <button class="tab" role="tab" aria-selected="false" data-f="rv">RV / tent · 2</button>
+        </div>
+      </div>
+      <div class="site-grid" id="siteGrid"></div>
+    </div>
+  </section>
+
+  <!-- GOOD TO KNOW -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-circle-info"></i> Good to know</span>
+          <h2>Simple, rustic, and honest.</h2>
+        </div>
+        <p>Here's exactly what you'll find and what to bring, so there are no surprises when you pull in.</p>
+      </div>
+      <div class="know">
+        <div class="know-card rv">
+          <h3><i class="fa-solid fa-check"></i>What's here</h3>
+          <ul>
+            <li><i class="fa-solid fa-tree"></i><span>Private, forested sites<small>Natural vegetation barriers between each site</small></span></li>
+            <li><i class="fa-solid fa-kitchen-set"></i><span>Communal kitchen &amp; lounge<small>Wash dishes and cook out of the rain</small></span></li>
+            <li><i class="fa-solid fa-toilet"></i><span>Composting outhouse<small>Clean and well stocked, with running water and lights</small></span></li>
+            <li><i class="fa-solid fa-droplet"></i><span>Potable water &amp; trash service</span></li>
+            <li><i class="fa-solid fa-basket-shopping"></i><span>Eggs &amp; firewood for sale<small>Plus a wagon to haul gear to your site</small></span></li>
+          </ul>
+        </div>
+        <div class="know-card plan rv">
+          <h3><i class="fa-solid fa-triangle-exclamation"></i>Plan ahead</h3>
+          <ul>
+            <li><i class="fa-solid fa-plug-circle-xmark"></i><span>No hookups<small>No electric or water hookups. Fully off grid</small></span></li>
+            <li><i class="fa-solid fa-shower"></i><span>No showers on site</span></li>
+            <li><i class="fa-solid fa-dog"></i><span>No pets allowed</span></li>
+            <li><i class="fa-solid fa-ruler-horizontal"></i><span>Vehicle size limits<small>Site #1 under 30 ft · Site #6 under 20 ft · tent sites park 50 to 90 ft away</small></span></li>
+            <li><i class="fa-solid fa-cloud-rain"></i><span>It's a rainforest<small>Pack rain gear. Guests say it's still lovely when wet</small></span></li>
+            <li><i class="fa-solid fa-fire-flame-curved"></i><span>Campfires follow seasonal rules<small>Ask your host about current fire restrictions</small></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="photos" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="eyebrow"><i class="fa-regular fa-images"></i> Photo gallery</span>
+          <h2>Take a walk around.</h2>
+        </div>
+        <p>Tap any photo to view it full screen. Use your arrow keys or swipe to browse.</p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <div class="g-more"><button class="btn btn-ghost" id="gMore"><i class="fa-solid fa-plus"></i> Show more photos</button></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews" style="background:var(--mist)">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-comment-dots"></i> Guest reviews</span>
+          <h2>Campers keep coming back.</h2>
+        </div>
+      </div>
+      <div class="rev-wrap">
+        <aside class="score rv">
+          <div class="big">98%</div>
+          <p>of 464 campers recommend Capa · 364 written reviews</p>
+          <div class="chips">
+            <span><i class="fa-solid fa-heart"></i>General vibe</span>
+            <span><i class="fa-solid fa-user-shield"></i>Privacy</span>
+            <span><i class="fa-solid fa-hand-holding-heart"></i>Host</span>
+            <span><i class="fa-solid fa-person-hiking"></i>Nearby attractions</span>
+            <span><i class="fa-solid fa-children"></i>Families</span>
+          </div>
+          <div class="award">
+            <div><i class="fa-solid fa-trophy"></i>Best in Washington finalist, 2024</div>
+            <div><i class="fa-solid fa-circle-check"></i>Hosting since October 2020</div>
+            <div><i class="fa-solid fa-star"></i>Paul is a Star Host</div>
+          </div>
+        </aside>
+        <div class="rev-grid" id="revGrid">
+          <article class="rev wide rv">
+            <span class="eyebrow">What most guests say</span>
+            <p style="margin-top:10px">Guests consistently mention a quiet, off grid stay with sites screened by natural barriers, warm hosts who give a farm tour and sell fresh eggs, a communal kitchen that saves rainy days, and quick access to Lake Quinault's hiking trails.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEARBY -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-compass"></i> Things to do</span>
+          <h2>Your basecamp for the Olympic Peninsula.</h2>
+        </div>
+        <p>Spend the day exploring rainforest, lakes and wild coast, then come home to quiet.</p>
+      </div>
+      <div class="near">
+        <div class="near-card rv"><i class="fa-solid fa-water"></i><h4>Lake Quinault</h4><p>Swim, paddle, or visit the historic lodge. Guests call it just a few minutes away.</p><span class="dist">Minutes away</span></div>
+        <div class="near-card rv"><i class="fa-solid fa-person-hiking"></i><h4>Quinault rainforest trails</h4><p>Mossy forest trails start near the lake and ranger station.</p><span class="dist">Short drive</span></div>
+        <div class="near-card rv"><i class="fa-solid fa-mountain-sun"></i><h4>Olympic National Park</h4><p>The park borders the valley, giving you easy access to its Quinault side.</p><span class="dist">On your doorstep</span></div>
+        <div class="near-card rv"><i class="fa-solid fa-mountain"></i><h4>Colonel Bob Wilderness</h4><p>Rugged, quiet backcountry right beside the valley.</p><span class="dist">Next door</span></div>
+        <div class="near-card rv"><i class="fa-solid fa-tree"></i><h4>Hoh Rain Forest</h4><p>One of the most famous temperate rainforests in the US. A classic day trip.</p><span class="dist">Day trip</span></div>
+        <div class="near-card rv"><i class="fa-solid fa-umbrella-beach"></i><h4>Kalaloch &amp; coast beaches</h4><p>Head up Highway 101 to Beach 1, Beach 2 and Kalaloch's wild shoreline.</p><span class="dist">Day trip</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOST -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="host rv">
+        <div class="host-av"><img src="https://hipcamp-res.cloudinary.com/image/upload/c_fill,f_auto,h_240,w_240/v1601942715/profile/vub5fmact8pla3kdgdhb.jpg" alt="Paul, host of Capa Campground"><i class="fa-solid fa-star" title="Star Host"></i></div>
+        <div>
+          <span class="eyebrow">Meet your hosts</span>
+          <h3>Paul &amp; Carol</h3>
+          <p>Hosting campers since October 2020. Paul greets most guests personally with a tour of the farm, the garden and the facilities, and he is always close by if you need anything.</p>
+          <div class="host-perks">
+            <span><i class="fa-solid fa-route"></i>Farm tour on arrival</span>
+            <span><i class="fa-solid fa-egg"></i>Fresh eggs</span>
+            <span><i class="fa-solid fa-apple-whole"></i>Garden berries in season</span>
+            <span><i class="fa-solid fa-bolt"></i>Responsive Star Host</span>
+          </div>
+        </div>
+        <a class="btn btn-ghost" href="#contact"><i class="fa-regular fa-envelope"></i> Contact hosts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="section book" id="book">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="eyebrow"><i class="fa-regular fa-calendar-check"></i> Book your stay</span>
+          <h2>Plan your trip in four easy steps.</h2>
+        </div>
+        <p>Pick your dates and site, add your details, and send your request. Paul and Carol will confirm by email.</p>
+      </div>
+      <div class="book-grid">
+        <form class="form rv" id="bookForm" novalidate>
+          <div class="step">
+            <div class="step-h"><b>1</b><h3>When are you coming?</h3></div>
+            <div class="row">
+              <div class="field" id="fArrive"><label for="arrive">Arrival</label><input type="date" id="arrive" required><span class="msg">Choose an arrival date.</span></div>
+              <div class="field" id="fDepart"><label for="depart">Departure</label><input type="date" id="depart" required><span class="msg">Departure must be after arrival.</span></div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-h"><b>2</b><h3>Who's coming &amp; how?</h3></div>
+            <div class="row">
+              <div class="field"><label>Guests</label>
+                <div class="stepper"><output id="guestOut" aria-live="polite">2 guests</output>
+                  <div style="display:flex;gap:6px"><button type="button" id="gMinus" aria-label="Fewer guests"><i class="fa-solid fa-minus"></i></button><button type="button" id="gPlus" aria-label="More guests"><i class="fa-solid fa-plus"></i></button></div>
+                </div>
+              </div>
+              <div class="field"><label>Camping with</label>
+                <div class="seg">
+                  <input type="radio" name="rig" id="rigTent" value="tent" checked><label for="rigTent"><i class="fa-solid fa-campground"></i>Tent</label>
+                  <input type="radio" name="rig" id="rigRv" value="rv"><label for="rigRv"><i class="fa-solid fa-van-shuttle"></i>Van / RV</label>
+                </div>
+              </div>
+            </div>
+            <div class="field rv-len" id="rvLen"><label for="len">Vehicle length (ft)</label><input type="number" id="len" min="10" max="45" value="18" inputmode="numeric"></div>
+          </div>
+          <div class="step" style="margin-bottom:0">
+            <div class="step-h"><b>3</b><h3>Choose your site</h3></div>
+            <div class="site-pick" id="sitePick"></div>
+            <div class="alert warn" id="warn"><i class="fa-solid fa-triangle-exclamation"></i><span id="warnTxt"></span></div>
+            <div class="alert ok" id="ok"><i class="fa-solid fa-circle-check"></i><span id="okTxt"></span></div>
+          </div>
+          <div class="step" style="margin:28px 0 0">
+            <div class="step-h"><b>4</b><h3>Your details</h3></div>
+            <div class="row">
+              <div class="field" id="fName"><label for="gName">Full name</label><input type="text" id="gName" autocomplete="name" placeholder="Jane Smith"><span class="msg">Please add your name.</span></div>
+              <div class="field" id="fEmail"><label for="gEmail">Email</label><input type="email" id="gEmail" autocomplete="email" placeholder="you@email.com"><span class="msg">Please add a valid email.</span></div>
+            </div>
+            <div class="field" style="margin-top:12px"><label for="gPhone">Phone (optional)</label><input type="tel" id="gPhone" autocomplete="tel" placeholder="(360) 555 0123"></div>
+          </div>
+        </form>
+
+        <aside class="summary rv" aria-live="polite">
+          <div class="sum-img"><img id="sumImg" src="" alt=""><span class="tag" id="sumTag"></span></div>
+          <div class="sum-body">
+            <div id="sumMain">
+              <h3 id="sumName">Pick a site</h3>
+              <div class="sub" id="sumSub">Capa Campground · Amanda Park, WA</div>
+              <ul class="lines">
+                <li><span><i class="fa-regular fa-calendar"></i>Dates</span><span id="sumDates">Add dates</span></li>
+                <li><span><i class="fa-solid fa-moon"></i>Nights</span><span id="sumNights">0</span></li>
+                <li><span><i class="fa-solid fa-user-group"></i>Guests</span><span id="sumGuests">2</span></li>
+                <li><span><i class="fa-solid fa-car-side"></i>Arriving with</span><span id="sumRig">Tent</span></li>
+              </ul>
+              <div class="total"><span>Estimate from</span><b id="sumTotal">$45</b></div>
+              <button class="btn btn-yolk" id="reqBtn" type="button">Request to book <i class="fa-solid fa-paper-plane"></i></button>
+              <p class="fine"><i class="fa-solid fa-lock"></i> No payment now. Your hosts confirm availability and the final price.</p>
+            </div>
+            <div class="done" id="done">
+              <i class="fa-solid fa-circle-check big"></i>
+              <h3>Your request is ready!</h3>
+              <p class="sub" id="doneTxt" style="margin:8px 0 18px"></p>
+              <a class="btn btn-yolk" id="doneLink" href="#">Send booking request <i class="fa-solid fa-paper-plane"></i></a>
+              <p class="fine"><button type="button" id="editBtn" style="background:none;border:0;color:var(--lichen);text-decoration:underline;cursor:pointer">Edit trip details</button></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section" id="location">
+    <div class="wrap loc">
+      <div class="loc-info rv">
+        <span class="eyebrow"><i class="fa-solid fa-location-dot"></i> Location</span>
+        <h3>Amanda Park, Grays Harbor County, WA</h3>
+        <p>Just past Lake Quinault on a quiet road with no through traffic, so nights are truly silent. The exact address is shared after you book.</p>
+        <ul>
+          <li><i class="fa-solid fa-road"></i>Easy access from US Highway 101</li>
+          <li><i class="fa-solid fa-signal"></i>Download maps before you go, as signal is limited</li>
+          <li><i class="fa-solid fa-gas-pump"></i>Fill up and stock up before heading up the valley</li>
+        </ul>
+      </div>
+      <div class="map rv">
+        <iframe title="Map of Amanda Park, Washington" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Amanda%20Park%2C%20WA&t=p&z=11&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-cta">
+      <h2>Your quiet corner of the rainforest is waiting.</h2>
+      <a href="#book" class="btn btn-yolk">Book from $45 per night <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="logo"><span class="mark"><i class="fa-solid fa-tree"></i></span>Capa Campground</a>
+        <p>Six private forest campsites on a small homestead in the Quinault River Valley, Washington. Quiet nights, fresh farm eggs and the Olympic Peninsula on your doorstep.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="mailto:info@capacampground.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#sites">Campsites</a></li>
+          <li><a href="#photos">Photo gallery</a></li>
+          <li><a href="#reviews">Guest reviews</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#book">Book your stay</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Our sites</h4>
+        <ul>
+          <li><a href="#book" data-site="1">Rainforest Site #1</a></li>
+          <li><a href="#book" data-site="2">Sitka · Site #2</a></li>
+          <li><a href="#book" data-site="3">Rainforest Site #3</a></li>
+          <li><a href="#book" data-site="4">Rainforest Site #4</a></li>
+          <li><a href="#book" data-site="5">Double Site #5</a></li>
+          <li><a href="#book" data-site="6">Rainforest Site #6</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul class="contact">
+          <li><i class="fa-solid fa-location-dot"></i><span>Amanda Park, WA 98526<br><small>Exact address shared after booking</small></span></li>
+          <li><i class="fa-solid fa-phone"></i><a href="tel:+13605550148">+1 (360) 555 0148</a></li>
+          <li><i class="fa-regular fa-envelope"></i><a href="mailto:info@capacampground.com">info@capacampground.com</a></li>
+          <li><i class="fa-regular fa-clock"></i><span>Replies within a few hours</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; <span id="yr">2026</span> Capa Campground. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><div><b>From $45</b><small>per night · 98% recommend</small></div><a href="#book" class="btn btn-yolk">Book now</a></div>
+<button class="totop" id="totop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <span class="count" id="lbCount"></span>
+  <button class="x" id="lbX" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lp" id="lbP" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+  <button class="ln" id="lbN" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<script>
+(function(){
+const CF='https://dxynby2r8cy0b.cloudfront.net/';
+const L=(v,id)=>CF+'f_auto,c_limit,w_1920,q_auto/'+v+'/campground-photos/'+id+'.jpg';
+const S=(v,id,slug)=>CF+'images/f_auto,c_limit,w_1920,q_auto/'+v+'/campground-photos/'+id+'/capa-campground-'+slug+'-washington-coast.jpg';
+const sz=(u,w)=>u.replace('w_1920','w_'+w);
+const EMAIL='info@capacampground.com';
+const PRICE=45;
+
+const land=[
+  [L('v1784925021','jmo7fnoy4dmhii5nwd83'),'The homestead'],
+  [L('v1784925015','heyqxsz4v1wuxonig60u'),'Lake Quinault, nearby'],
+  [L('v1784925045','egclimtxfywsqpkurucp'),'On the land'],
+  [L('v1784925037','ocjdr76wqlkytxrxacr1'),'On the land'],
+  [L('v1784925016','pj8lwgffmf5kdimsltae'),'On the land'],
+  [L('v1784925022','uu4zo51ojs7nw16kw3ni'),'The farm']
+];
+
+const sites=[
+  {id:'1',name:'Rainforest Site #1',type:'rv',sleeps:4,maxLen:30,rate:95,n:89,
+   park:'Park at site',desc:'Nestled in the trees for cover and shade. 8×8 tent pad, rock fire ring and small picnic table. Your car or camper van parks right at the site.',
+   imgs:[S('v1681869426','jevyzoanctnbhnr8b1ge','mountain-rainforest-campsite-1'),land[0][0],land[1][0]]},
+  {id:'2',name:'Sitka · Site #2',type:'tent',sleeps:6,rate:98,n:73,
+   park:'Parking 50 ft away',desc:'10×10 tent pad, large picnic table and a fire ring with seating. Sunny in the morning, shady in the afternoon.',
+   imgs:[S('v1690764723','otxvbkb1yfhq6qwrvxep','mountain-rainforest-campsite-2'),S('v1624234175','xmeqaludsr9iocibuqht','mountain-rainforest-campsite-2'),S('v1624234208','slwhwgzir2tn6bfk8zga','mountain-rainforest-campsite-2')]},
+  {id:'3',name:'Rainforest Site #3',type:'tent',sleeps:4,rate:99,n:46,
+   park:'Parking 30 yds away',desc:'A cozy spot right beside the hillside, ideal for two. 8×8 tent pad, small stone fire ring and picnic table.',
+   imgs:[S('v1692941200','q01acu0ykc3dppsyv98n','mountain-rainforest-campsite-3'),S('v1624233956','lvwamg5uaa7sbr1c6idt','mountain-rainforest-campsite-3'),S('v1624233973','xfjakuuptiqsckycojre','mountain-rainforest-campsite-3')]},
+  {id:'4',name:'Rainforest Site #4',type:'tent',sleeps:4,rate:98,n:57,
+   park:'Parking 50 ft away',desc:'10×10 tent pad with room for one large tent, plus a picnic table and fire ring. Private and screened by vegetation.',
+   imgs:[S('v1660107461','hnvquuo84ku6hwcwy6oc','mountain-rainforest-campsite-4'),S('v1660107465','aa3rqo1yuccm3e1ymafv','mountain-rainforest-campsite-4'),S('v1624232854','bsxhj0dlfxfrktdhqaq1','mountain-rainforest-campsite-4')]},
+  {id:'5',name:'Double Site #5',type:'tent',sleeps:10,rate:96,n:52,group:true,
+   park:'Short walk',desc:'The biggest site, with two 10×10 tent pads, a large picnic table and fire ring. Great for families and groups.',
+   imgs:[S('v1713721174','goaafnxk83lginuipoaq','double-site-5'),S('v1624574009','jjtemev3um6nbubmjknf','double-site-5'),S('v1624574026','d7cyosuymv9tiw8c5swy','double-site-5')]},
+  {id:'6',name:'Rainforest Site #6',type:'rv',sleeps:5,maxLen:20,rate:99,n:80,
+   park:'Park at site',desc:'Shaded under alder trees with a level 8×8 pad, fire ring and table. Fits a small camper or van, or a second tent.',
+   imgs:[S('v1690855806','d3zofzfruychfwrdnjeb','mountain-rainforest-campsite-6'),S('v1624233724','vqrzjmowfmg4khvi1fhg','mountain-rainforest-campsite-6'),S('v1624233741','vtzmgqaa34xkdjhz8cvm','mountain-rainforest-campsite-6')]}
+];
+
+/* ---------- gallery data ---------- */
+const gal=land.map(x=>({u:x[0],c:x[1]}));
+sites.forEach(s=>s.imgs.forEach(u=>{ if(!gal.some(g=>g.u===u)) gal.push({u,c:s.name}); }));
+document.getElementById('photoCount').textContent=gal.length+' photos';
+
+/* ---------- header / nav ---------- */
+const top=document.getElementById('top'),burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.innerHTML=o?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded',false);burger.innerHTML='<i class="fa-solid fa-bars"></i>';}));
+const mbar=document.getElementById('mbar'),totop=document.getElementById('totop'),bookSec=document.getElementById('book');
+function onScroll(){
+  const y=scrollY;top.classList.toggle('scrolled',y>10);
+  const bRect=bookSec.getBoundingClientRect();
+  const inBook=bRect.top<innerHeight&&bRect.bottom>0;
+  mbar.classList.toggle('show',y>500&&!inBook);
+  totop.classList.toggle('show',y>900);
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+totop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+const links=[...nav.querySelectorAll('a:not(.btn)')];
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-45% 0px -50% 0px'});
+['sites','photos','reviews','location'].forEach(id=>spy.observe(document.getElementById(id)));
+
+/* ---------- site cards ---------- */
+const grid=document.getElementById('siteGrid');
+grid.innerHTML=sites.map(s=>`
+ <article class="site rv" data-type="${s.type}">
+  <div class="slides" data-i="0">
+   ${s.type==='rv'?`<span class="tag"><i class="fa-solid fa-van-shuttle"></i>RV/tent · under ${s.maxLen} ft</span>`:(s.group?`<span class="tag"><i class="fa-solid fa-people-group"></i>Best for groups</span>`:'')}
+   ${s.imgs.map((u,i)=>`<img src="${sz(u,800)}" alt="${s.name}, photo ${i+1}" loading="lazy" class="${i?'':'on'}" data-u="${u}">`).join('')}
+   <button class="sl-btn prev" aria-label="Previous photo of ${s.name}"><i class="fa-solid fa-chevron-left"></i></button>
+   <button class="sl-btn next" aria-label="Next photo of ${s.name}"><i class="fa-solid fa-chevron-right"></i></button>
+   <div class="dots">${s.imgs.map((_,i)=>`<span class="${i?'':'on'}"></span>`).join('')}</div>
+  </div>
+  <div class="site-body">
+   <div class="site-top"><h3>${s.name}</h3><span class="rating"><i class="fa-solid fa-thumbs-up"></i> ${s.rate}% (${s.n})</span></div>
+   <div class="meta"><span><i class="fa-solid fa-user-group"></i>Sleeps ${s.sleeps}</span><span><i class="fa-solid fa-car"></i>${s.park}</span></div>
+   <p class="desc">${s.desc}</p>
+   <button class="btn btn-ghost choose" data-id="${s.id}">Book this site <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+ </article>`).join('');
+
+grid.querySelectorAll('.slides').forEach(box=>{
+  const imgs=[...box.querySelectorAll('img')],dots=[...box.querySelectorAll('.dots span')];
+  const go=d=>{let i=+box.dataset.i;imgs[i].classList.remove('on');dots[i].classList.remove('on');i=(i+d+imgs.length)%imgs.length;box.dataset.i=i;imgs[i].classList.add('on');dots[i].classList.add('on');};
+  box.querySelector('.prev').addEventListener('click',e=>{e.stopPropagation();go(-1)});
+  box.querySelector('.next').addEventListener('click',e=>{e.stopPropagation();go(1)});
+  let sx=null;box.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+  box.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(dx<0?1:-1);sx=null;});
+  imgs.forEach(img=>img.addEventListener('click',()=>openLb(gal.findIndex(g=>g.u===img.dataset.u))));
+});
+
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
+  const f=t.dataset.f;
+  grid.querySelectorAll('.site').forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.type!==f));
+}));
+
+grid.querySelectorAll('.choose').forEach(b=>b.addEventListener('click',()=>{selectSite(b.dataset.id);bookSec.scrollIntoView({behavior:'smooth'});}));
+
+/* ---------- gallery ---------- */
+const gEl=document.getElementById('gallery'),gMore=document.getElementById('gMore');
+let shown=12;
+function renderGal(){
+  gEl.innerHTML=gal.slice(0,shown).map((g,i)=>`<button class="g-item" data-i="${i}" aria-label="Open photo: ${g.c}"><img src="${sz(g.u,700)}" alt="${g.c}" loading="lazy"></button>`).join('');
+  gEl.querySelectorAll('.g-item').forEach(b=>b.addEventListener('click',()=>openLb(+b.dataset.i)));
+  gMore.style.display=shown>=gal.length?'none':'';
+}
+gMore.addEventListener('click',()=>{shown=gal.length;renderGal();});
+renderGal();
+document.querySelectorAll('#mosaic .tile').forEach(t=>t.addEventListener('click',()=>openLb(+t.dataset.g)));
+
+/* ---------- lightbox ---------- */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCount=document.getElementById('lbCount');
+let li=0,lastFocus=null;
+function showLb(){lbImg.style.opacity=0;const g=gal[li];const im=new Image();im.onload=im.onerror=()=>{lbImg.src=g.u;lbImg.alt=g.c;lbImg.style.opacity=1;};im.src=g.u;lbCap.textContent=g.c;lbCount.textContent=(li+1)+' / '+gal.length;}
+function openLb(i){li=Math.max(0,i);lastFocus=document.activeElement;lb.classList.add('open');document.body.style.overflow='hidden';showLb();document.getElementById('lbX').focus();}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+const step=d=>{li=(li+d+gal.length)%gal.length;showLb();};
+document.getElementById('lbX').onclick=closeLb;
+document.getElementById('lbP').onclick=()=>step(-1);
+document.getElementById('lbN').onclick=()=>step(1);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+let lx=null;lb.addEventListener('touchstart',e=>lx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{if(lx===null)return;const dx=e.changedTouches[0].clientX-lx;if(Math.abs(dx)>50)step(dx<0?1:-1);lx=null;});
+
+/* ---------- reviews ---------- */
+const reviews=[
+  ['Paul is an excellent host and we enjoyed the farm tour.','Michael O.','Site #1 · Aug 2026'],
+  ["It's dead quiet at night.",'Zach H.','Site #3 · with kids'],
+  ['Every campsite is carefully designed for privacy.','Jeff D.','Site #6 · Aug 2026'],
+  ["Lots of thoughtful touches you don't see at public campgrounds.",'Daniel Y.','Site #2 · Jul 2026'],
+  ["I'll likely return next year for round 4.",'Raena B.','Site #4 · third stay'],
+  ['Just go ahead and hit the "book" button.','Jon Y.','Double site #5'],
+  ["We'd come back in a heartbeat!",'April L.','Site #3 · Jul 2026'],
+  ['One of our favorite campsites we ever stayed at.','Kristy J.','Site #2 · Aug 2026']
+];
+document.getElementById('revGrid').insertAdjacentHTML('beforeend',reviews.map(r=>`
+ <article class="rev rv"><div class="stars" aria-label="Recommends"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+ <p class="q">${r[0]}</p><div class="who"><span class="av">${r[1][0]}</span><span><b>${r[1]}</b><small>${r[2]}</small></span></div></article>`).join(''));
+
+/* ---------- booking ---------- */
+const $=id=>document.getElementById(id);
+const pick=$('sitePick');
+pick.innerHTML=sites.map(s=>`<div class="pick"><input type="radio" name="site" id="s${s.id}" value="${s.id}"><label for="s${s.id}"><span class="ic"><i class="fa-solid ${s.type==='rv'?'fa-van-shuttle':'fa-campground'}"></i></span><b>${s.name}</b><small>Sleeps ${s.sleeps}${s.maxLen?' · RV &lt; '+s.maxLen+' ft':' · tent only'}</small></label></div>`).join('');
+
+const iso=d=>{const z=new Date(d.getTime()-d.getTimezoneOffset()*6e4);return z.toISOString().slice(0,10);};
+const today=new Date();today.setHours(0,0,0,0);
+const tmr=new Date(today);tmr.setDate(tmr.getDate()+1);
+['arrive','qArrive'].forEach(id=>$(id).min=iso(today));
+['depart','qDepart'].forEach(id=>$(id).min=iso(tmr));
+
+let guests=2,chosen=null;
+function rig(){return document.querySelector('input[name=rig]:checked').value;}
+function nights(){const a=$('arrive').value,d=$('depart').value;if(!a||!d)return 0;return Math.round((new Date(d)-new Date(a))/864e5);}
+function fmt(v){return new Date(v+'T00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+
+function suggest(){
+  const r=rig(),len=+$('len').value||0;
+  if(r==='rv'){ if(len<=20&&guests<=5) return '6'; if(len<=30&&guests<=4) return '1'; return null; }
+  if(guests>6) return '5'; if(guests>4) return '2'; if(guests<=2) return '3'; return '4';
+}
+function fits(s){
+  const r=rig(),len=+$('len').value||0;
+  if(guests>s.sleeps) return `${s.name} sleeps up to ${s.sleeps}.`;
+  if(r==='rv'&&s.type!=='rv') return `${s.name} is for tents only. Vehicles park nearby, not at the site.`;
+  if(r==='rv'&&len>s.maxLen) return `${s.name} fits vehicles under ${s.maxLen} ft.`;
+  return '';
+}
+function selectSite(id){const el=$('s'+id);if(el){el.checked=true;chosen=id;update();}}
+
+function update(){
+  $('guestOut').textContent=guests+(guests===1?' guest':' guests');
+  $('gMinus').disabled=guests<=1;$('gPlus').disabled=guests>=10;
+  $('rvLen').classList.toggle('show',rig()==='rv');
+  const s=sites.find(x=>x.id===chosen);
+  const warn=$('warn'),ok=$('ok');
+  const sug=suggest(),sugSite=sites.find(x=>x.id===sug);
+  warn.classList.remove('show');ok.classList.remove('show');
+  if(s){
+    const issue=fits(s);
+    if(issue){
+      warn.classList.add('show');
+      $('warnTxt').innerHTML=issue+(sugSite?` Try <button type="button" data-s="${sugSite.id}">${sugSite.name}</button> instead.`:' None of our sites fit this setup, so please contact us.');
+      const b=warn.querySelector('button[data-s]');if(b)b.onclick=()=>selectSite(b.dataset.s);
+    }else{ok.classList.add('show');$('okTxt').textContent=`Great choice! ${s.name} fits your group.`;}
+  }else if(sugSite){
+    ok.classList.add('show');
+    $('okTxt').innerHTML=`Based on your group, we suggest <button type="button" data-s="${sugSite.id}">${sugSite.name}</button>.`;
+    ok.querySelector('button').onclick=()=>selectSite(sugSite.id);
+  }else if(rig()==='rv'){
+    warn.classList.add('show');$('warnTxt').textContent='Our RV sites fit vehicles under 30 ft (Site #1) or 20 ft (Site #6).';
+  }
+  // summary
+  const show=s||sugSite||sites[0];
+  $('sumImg').src=sz(show.imgs[0],900);$('sumImg').alt=show.name;
+  $('sumTag').innerHTML=`<i class="fa-solid fa-thumbs-up"></i>${show.rate}% recommend`;
+  $('sumName').textContent=s?s.name:'Pick a site';
+  $('sumSub').textContent=s?`Sleeps ${s.sleeps} · ${s.park}`:'Capa Campground · Amanda Park, WA';
+  const a=$('arrive').value,d=$('depart').value,n=nights();
+  $('sumDates').textContent=a&&d&&n>0?`${fmt(a)} to ${fmt(d)}`:'Add dates';
+  $('sumNights').textContent=n>0?n:'0';
+  $('sumGuests').textContent=guests;
+  $('sumRig').textContent=rig()==='rv'?`Van/RV · ${$('len').value||'?'} ft`:'Tent';
+  $('sumTotal').textContent='$'+(PRICE*Math.max(1,n));
+}
+
+$('gMinus').onclick=()=>{guests=Math.max(1,guests-1);update();};
+$('gPlus').onclick=()=>{guests=Math.min(10,guests+1);update();};
+document.querySelectorAll('input[name=rig]').forEach(r=>r.addEventListener('change',update));
+$('len').addEventListener('input',update);
+pick.addEventListener('change',e=>{chosen=e.target.value;update();});
+$('arrive').addEventListener('change',()=>{
+  const a=$('arrive').value;if(a){const nd=new Date(a+'T00:00');nd.setDate(nd.getDate()+1);$('depart').min=iso(nd);if(!$('depart').value||$('depart').value<=a)$('depart').value=iso(nd);}
+  $('fArrive').classList.remove('err');$('fDepart').classList.remove('err');update();
+});
+$('depart').addEventListener('change',()=>{$('fDepart').classList.remove('err');update();});
+
+$('reqBtn').addEventListener('click',()=>{
+  let good=true;
+  if(!$('arrive').value){$('fArrive').classList.add('err');good=false;}
+  if(nights()<1){$('fDepart').classList.add('err');good=false;}
+  if(!$('gName').value.trim()){$('fName').classList.add('err');good=false;}
+  if(!/^\S+@\S+\.\S+$/.test($('gEmail').value.trim())){$('fEmail').classList.add('err');good=false;}
+  if(!sites.find(x=>x.id===chosen)){const sg=suggest();if(sg)selectSite(sg);else good=false;}
+  const cur=sites.find(x=>x.id===chosen);
+  if(cur&&fits(cur)) good=false;
+  if(!good){
+    const first=document.querySelector('.field.err input');
+    if(first){first.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>first.focus({preventScroll:true}),400);}
+    else bookSec.querySelector('.form').scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+  const n=nights(),a=fmt($('arrive').value),d=fmt($('depart').value);
+  $('doneTxt').textContent=`${cur.name} · ${a} to ${d} · ${n} night${n>1?'s':''} · ${guests} guest${guests>1?'s':''}. Tap below to send it, and the hosts will reply to confirm.`;
+  const body=[`Hi Paul and Carol,`,``,`I'd like to request a booking at Capa Campground.`,``,`Site: ${cur.name}`,`Dates: ${a} to ${d} (${n} night${n>1?'s':''})`,`Guests: ${guests}`,`Camping with: ${rig()==='rv'?'Van/RV, '+$('len').value+' ft':'Tent'}`,``,`Name: ${$('gName').value.trim()}`,`Email: ${$('gEmail').value.trim()}`,`Phone: ${$('gPhone').value.trim()||'Not given'}`].join('\n');
+  $('doneLink').href=`mailto:${EMAIL}?subject=${encodeURIComponent('Booking request: '+cur.name+', '+a)}&body=${encodeURIComponent(body)}`;
+  $('sumMain').style.display='none';$('done').classList.add('show');
+});
+['gName','gEmail'].forEach(id=>$(id).addEventListener('input',()=>$(id==='gName'?'fName':'fEmail').classList.remove('err')));
+$('editBtn').addEventListener('click',()=>{$('done').classList.remove('show');$('sumMain').style.display='';});
+
+/* quick form -> booking */
+$('qArrive').addEventListener('change',()=>{const a=$('qArrive').value;if(a){const nd=new Date(a+'T00:00');nd.setDate(nd.getDate()+1);$('qDepart').min=iso(nd);if(!$('qDepart').value||$('qDepart').value<=a)$('qDepart').value=iso(nd);}});
+$('quickForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  if($('qArrive').value){$('arrive').value=$('qArrive').value;$('arrive').dispatchEvent(new Event('change'));}
+  if($('qDepart').value){$('depart').value=$('qDepart').value;}
+  guests=+$('qGuests').value;
+  (($('qType').value==='rv')?$('rigRv'):$('rigTent')).checked=true;
+  chosen=null;document.querySelectorAll('input[name=site]').forEach(i=>i.checked=false);
+  const sg=suggest();if(sg)selectSite(sg);else update();
+  bookSec.scrollIntoView({behavior:'smooth'});
+});
+
+document.querySelectorAll('[data-site]').forEach(a=>a.addEventListener('click',()=>selectSite(a.dataset.site)));
+$('yr').textContent=new Date().getFullYear();
+update();
+
+/* ---------- reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*70+'ms';io.observe(el);});
+})();
+</script>
+</body>
+</html>
